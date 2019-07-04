@@ -3,11 +3,13 @@ package com.yuliyang.viewpager2
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.ViewModelProviders
+import androidx.viewpager.widget.ViewPager
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
 import kotlinx.android.synthetic.main.activity_main.*
@@ -45,8 +47,12 @@ class MainActivity : AppCompatActivity() {
         viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
             override fun onPageSelected(position: Int) {
                 super.onPageSelected(position)
-                println("${viewModels["f$position"]}")
+//                println("${viewModels["f$position"]}")
 //                println("${viewModels["f$position"]?.name}")
+            }
+        })
+        viewPager.setPageTransformer(object : ViewPager2.PageTransformer {
+            override fun transformPage(page: View, position: Float) {
             }
         })
     }
@@ -70,3 +76,11 @@ class MainActivity : AppCompatActivity() {
 
     }
 }
+
+//class MyFragment : Fragment() {
+//    val viewmodel: TestViewModel by viewmodels()
+//}
+
+//class MyFragment : Fragment() {
+//    val viewmodel: TestViewModel by activityViewModels()
+//}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.yuliyang.viewpager2.CstmViewGroup
+        android:layout_width="300px"
+        android:layout_height="300px">
+
+        <View
+            android:id="@+id/test"
+            android:layout_width="550px"
+            android:layout_height="550px"
+            android:background="#f00" />
+    </com.yuliyang.viewpager2.CstmViewGroup>
+
+</LinearLayout>
